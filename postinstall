@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# create database if not already there
+python createdb.py
+
+
+
+# load fixtures from main
+python manage.py loaddata main
+
+# collect static files
+python manage.py collectstatic --noinput
+
+# register cron
+crontab ~/current/crontabs
+
+
+
+
+## not (yet) used
+# python manage.py syncdb --noinput
+# python mkadmin.py
+
+# python manage.py migrate // for south, not used yet

@@ -1,0 +1,11 @@
+www:
+  type: python
+
+db:
+  type: mysql
+
+#broker:
+#    type: rabbitmq
+
+#worker:
+#  type: python-worker

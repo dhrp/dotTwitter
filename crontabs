@@ -1,0 +1,2 @@
+*/5 * * * * ~/current/workers/twitterSearch.py
+

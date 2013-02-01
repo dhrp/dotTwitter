@@ -1,0 +1,55 @@
+{% extends "default.html" %}
+
+{% block navigation %}
+    <li><a href="/">Home</a></li>
+    <li><a href="/search/">Search</a></li>
+    <li class="active"><a href="/saved_tweets/">Saved Tweets</a></li>
+{% endblock navigation %}
+
+{% block content %}
+
+<div class="container">
+    <div class="page-header">
+        <h1>Now let's see our results!</h1>
+    </div>
+    <p class="lead">Tweets in database:</p>
+
+    <table class="table table-striped">
+        <tbody>
+            {% for result in tweets %}
+            <tr>
+                <td>
+                    <strong>{{ result.from_user_name }}</strong> (@{{ result.from_user }}):<br>
+                    {{ result.text }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if tweets.has_previous %}
+                <a href="?page={{ tweets.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ tweets.number }} of {{ tweets.paginator.num_pages }}.
+            </span>
+
+            {% if tweets.has_next %}
+                <a href="?page={{ tweets.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

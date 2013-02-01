@@ -1,0 +1,42 @@
+{% extends "default.html" %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <h3>select</h3>
+    {% for key, value in keywords.iteritems %}
+        <strong><a href="./{{ key }}/">{{ key }}</a> | </strong>
+    {% endfor %}
+
+
+    <a style="display: block; float: right;" href="/export/{{ filteraddress }}" class="btn btn-primary">export this set</a>
+
+
+    <br><br>
+
+
+    <h1>More than once!</h1>
+
+    <table class="table table-striped">
+        <tbody>
+        {% for key, result in results.iteritems %}
+            <tr>
+                <td>
+                    <strong>{{ result.0 }}</strong>
+                </td>
+                <td>
+                    {{ result.1 }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+</div>
+{% endblock %}
+
+
+

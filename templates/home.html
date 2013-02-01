@@ -1,0 +1,70 @@
+{% extends "default.html" %}
+
+{% block content %}
+
+<!-- Begin page content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>Enter your query</h1>
+        </div>
+        <p class="lead">Search twitter for:</p>
+
+        <form action="home_submit/" method="POST">
+            {% csrf_token %}
+            <ul class="formElements">
+                <li>
+                    {{ keywordform.keywords }}
+                    <input type="submit" class="btn btn-primary form-line-correct" value="Add">
+                    <input id="keywordinfobutton" type="button" class="btn form-line-correct" value="info"/>
+                </li>
+
+            </ul>
+
+            <div style="margin-left: 40px;">
+                {% for keyword in all_keywords %}
+                    <p>{{ keyword }} <span class="btn-link"><a href="/remove_keywords/{{ keyword.id }}">(remove)</a></span></p>
+                {% endfor %}
+            </div>
+        </form>
+
+        <form action="home_submit/" method="POST">
+            {% csrf_token %}
+            <p class="lead">Notify me of results on this number:</p>
+
+            <ul class="formElements">
+                <li>
+                    {{ userprofileform.phone_number }}
+                    <input type="submit" class="btn btn-primary form-line-correct" value="Update" />
+                    <input id="phonenumberinfobutton" type="button" class="btn form-line-correct" value="info"/>
+                </li>
+            </ul>
+
+        </form>
+            <strong>{{ result.status }}</strong>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+        {# Set up the popovers #}
+        $(document).ready(function() {
+            $('#keywordinfobutton').popover({
+                    placement: 'right',
+                    title: 'Keywords',
+                    content: 'Enter the keywords for which you want to get notified. We will run a search every 5 minutes and text you if a new result has come up.',
+                    trigger: 'hover'
+                }
+            );
+            $('#phonenumberinfobutton').popover({
+                    html: 'True',
+                    content: 'The phone number you want to get notifications on. At this time, because of twilio settings, no other numbers are supported.',
+                    title: 'Phone number',
+                    trigger: 'hover'
+                }
+            );
+        });
+
+    </script>
+
+{% endblock %}

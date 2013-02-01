@@ -1,0 +1,54 @@
+appended text 
+appended text 
+appended text 
+<type 'datetime.datetime'>appended text 
+<module 'datetime' from '/Users/thatcher/envs/dotTwitter/lib/python2.7/lib-dynload/datetime.so'>appended text 
+2012-12-02 18:21:45.142219appended text 
+2012-12-02 19:49:06.875242 appended text 
+2012-12-02 19:49:40.792954 appended text 
+2012-12-02 19:50:20.303601 appended text 
+2012-12-02 19:50:41.291424 appended text 
+2012-12-02 21:05:02.786509 appended text 
+2012-12-02 21:05:30.139536 appended text 
+2012-12-02 21:06:30.301646 appended text 
+2012-12-02 21:23:19.091794 appended text 
+2012-12-02 21:30:22.780561 appended text 
+2012-12-02 21:33:44.389914 appended text 
+2012-12-02 21:33:56.955317 appended text 
+2012-12-02 21:34:28.979882 appended text 
+2012-12-02 21:34:41.657409 appended text 
+2012-12-02 21:34:53.149067 appended text 
+2012-12-02 21:41:17.845241 appended text 
+2012-12-02 21:41:27.937808 appended text 
+2012-12-02 21:41:42.830700 appended text 
+2012-12-02 22:02:23.544003 appended text 
+2012-12-02 22:03:05.753512 appended text 
+2012-12-02 22:03:52.829124 appended text 
+2012-12-04 14:33:08.611646 appended text 
+2012-12-04 16:38:47.072898 appended text 
+2012-12-04 16:39:46.744529 appended text 
+2012-12-04 16:57:59.132028 appended text 
+2012-12-04 16:58:11.694896 appended text 
+2012-12-04 16:58:20.563386 appended text 
+2012-12-04 16:58:30.216231 appended text 
+2012-12-04 17:00:44.864950 appended text 
+2012-12-04 17:04:37.264919 appended text 
+2012-12-04 17:04:49.301960 appended text 
+2012-12-04 17:04:54.923232 appended text 
+2012-12-04 17:04:59.153800 appended text 
+2012-12-04 17:05:03.409611 appended text 
+2012-12-04 17:08:14.243590 appended text 
+2012-12-04 17:08:42.421355 appended text 
+2012-12-04 17:08:53.618001 appended text 
+2012-12-04 17:28:20.300145 appended text 
+2012-12-04 17:31:00.233637 appended text 
+2012-12-04 17:31:35.958287 appended text 
+2012-12-04 17:32:41.206187 appended text 
+2012-12-04 23:53:44.049893 appended text 
+2012-12-04 23:54:32.834361 appended text 
+2012-12-04 23:55:21.027897 appended text 
+2012-12-05 00:43:45.455241 appended text 
+2012-12-05 03:20:08.922891 appended text 
+2012-12-05 03:20:49.433193 appended text 
+2012-12-05 15:01:42.347435 appended text 
+2012-12-05 15:23:08.783952 appended text 
