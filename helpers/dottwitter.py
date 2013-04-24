@@ -60,10 +60,16 @@ class dotTwitter(object):
                 profile_image_url = result["profile_image_url"],
                 source = result["source"],
                 text = text,
-                to_user_id = result["to_user_id"],
-                to_user_name = result["to_user_name"],
                 keyword = result["keyword"]
             )
+
+            if "to_user_id" in result:
+                tweet.to_user_id = result["to_user_id"]
+
+            if "ro_user_name" in result:
+                tweet.to_user_name = result["to_user_name"]
+
+
             tweet.save()
 
         return "ok. " + str(len(tweets)) + " tweets stored"
@@ -84,7 +90,10 @@ class dotTwitter(object):
 
                 body = "DotTwitter has retrieved " + str(len(tweets)) + " messages with the keywords: " + keyword_string
                 try:
-                    message = twilio_client.sms.messages.create(to=self.phone_number, from_="+14154841479", body=body)
+
+                    ## Let's discable sending SMS messages for now
+                    # message = twilio_client.sms.messages.create(to=self.phone_number, from_="+14154841479", body=body)
+                    pass
                 except:
                     return "Twilio error, most likely the receiving number is invalid"
 
